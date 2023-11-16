@@ -1,0 +1,50 @@
+﻿<Properties StartupConfiguration="{C757676C-82D6-4832-A482-CF396E170A48}|https">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Hotels PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Hotels/Program.cs">
+    <Files>
+      <File FileName="Hotels/Views/Dashboard/Edit.cshtml" />
+      <File FileName="Hotels/Models/Hotel.cs" />
+      <File FileName="Hotels/Models/Invoice.cs" />
+      <File FileName="Hotels/Models/Rooms.cs" />
+      <File FileName="Hotels/Models/RoomDetails.cs" />
+      <File FileName="Hotels/Models/Cart.cs" />
+      <File FileName="Hotels/appsettings.json" />
+      <File FileName="Hotels/Data/ApplicationDbContext.cs" />
+      <File FileName="Hotels/Program.cs" Line="31" Column="26" />
+      <File FileName="Hotels/Views/Home/Index.cshtml" />
+      <File FileName="Hotels/Controllers/HomeController.cs" />
+      <File FileName="Hotels/Views/Shared/_Layout.cshtml" />
+      <File FileName="Hotels/Views/Home/Edit.cshtml" />
+      <File FileName="Hotels/Views/Dashboard/Index.cshtml" />
+      <File FileName="Hotels/Controllers/DashboardController.cs" />
+      <File FileName="Hotels/Views/Dashboard/Rooms.cshtml" />
+      <File FileName="Hotels/Views/Dashboard/EditRoom.cshtml" />
+      <File FileName="Hotels/Views/Dashboard/RoomDetails.cshtml" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Hotels" expanded="True">
+            <Node name="Hotels" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Dashboard" expanded="True" />
+                <Node name="Home" expanded="True" />
+              </Node>
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

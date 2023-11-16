@@ -1,0 +1,126 @@
+﻿@model IEnumerable<Hotel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<div class="row justify-content-center align-items-center h-100 mt-5">
+    <div class="col-12 col-lg-9 col-xl-7">
+        <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+            <div class="card-body p-4 p-md-5">
+                <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">أضافة فندق جديد</h3>
+                <form asp-controller="Home" asp-action="CreateNewRecord" method="post">
+
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+
+                            <div class="form-outline">
+                                <label class="form-label" for="Name">اسم الفندق</label>
+                                <input type="text" id="Name" name="Name" class="form-control form-control-lg" />
+                                <sapn asp-validation-for="@Model.First().Name"></sapn>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6 mb-4">
+
+                            <div class="form-outline">
+                                <label class="form-label" for="Images">صورة الفندق</label>
+                                <input type="text" id="Images" name="Images" class="form-control form-control-lg" />
+                                <sapn asp-validation-for="@Model.First().Images"></sapn>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                            <div class="form-outline datepicker w-100">
+                                <label class="form-label" for="City">المدينة</label>
+                                <input type="text" id="City" name="City" class="form-control form-control-lg" />
+                                <sapn asp-validation-for="@Model.First().City"></sapn>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6 mb-4">
+
+                            <label class="form-label" for="Address">العنوان</label>
+                            <input type="text" id="Address" name="Address" class="form-control form-control-lg" />
+                            <sapn asp-validation-for="@Model.First().Address"></sapn>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-4 pb-2">
+
+                            <div class="form-outline">
+                                <label class="form-label" for="Phone">رقم الهاتف</label>
+                                <input type="text" id="Phone" name="Phone" class="form-control form-control-lg" />
+                                <sapn asp-validation-for="@Model.First().Phone"></sapn>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6 mb-4 pb-2">
+
+                            <div class="form-outline">
+                                <label class="form-label" for="Email">البريد الإلكتروني</label>
+                                <input type="text" id="Email" name="Email" class="form-control form-control-lg" />
+                                <sapn asp-validation-for="@Model.First().Email"></sapn>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class=" mt-4 pt-2 text-center">
+                        <input class=" btn btn-primary btn-lg" type="submit" value="حفظ" />
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="table-responsive my-5 ">
+    <table class="table">
+        <thead>
+            <tr class="text-center">
+                <th>رقم الفندق</th>
+                <th>اسم الفندق</th>
+                <th>المدينة</th>
+                <th>عنوان الفندق</th>
+                <th>رقم الهاتف</th>
+                <th>البريد الألكتروني</th>
+                <th colspan="2">إجراء</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null)
+            {
+                @foreach (var item in Model)
+                {
+                    <tr class="text-center">
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.City</td>
+                        <td>@item.Address</td>
+                        <td>@item.Phone</td>
+                        <td>@item.Email </td>
+                        <td><a asp-action="Delete" asp-route-id="@item.Id"> <i class="fa fa-trash text-danger"></i></a></td>
+                        <td><a asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit text-success"></i></a></td>
+
+                    </tr>
+                }
+
+            }
+
+        </tbody>
+    </table>
+</div>
+
+
+
